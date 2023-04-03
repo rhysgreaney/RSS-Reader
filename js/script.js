@@ -55,6 +55,7 @@ xhr.onload = function(){
   if (xhr.status >=200 && xhr.status < 300){
     json = JSON.parse(xhr.responseText)
     console.log(json)
+    addRSStoDOM(json)
   }else{
     console.log("The Request Failed!")
     content.innerHTML = "The Request Failed, please check your RSS URL"
