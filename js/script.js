@@ -50,6 +50,16 @@ function addRSStoDOM(data) {
   content.appendChild(itemsContainer);
 }
 
+var xhr = new XMLHttpRequest();
+xhr.onload = function(){
+  if (xhr.status >=200 && xhr.status < 300){
+    console.log("Sucess!")
+  }else{
+    console.log("The Request Failed!")
+  }
+  }
+
+
 // The following gets the ADD RSS button to work.  This is a very similar
 // process that we did in the ToDo application.  Find the elements in
 // the HTML, then write a function to handle the element/event, then add
