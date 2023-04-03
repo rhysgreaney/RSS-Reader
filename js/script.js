@@ -57,6 +57,7 @@ xhr.onload = function(){
     console.log(json)
   }else{
     console.log("The Request Failed!")
+    content.innerHTML = "The Request Failed, please check your RSS URL"
   }
 }
 
