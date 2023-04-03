@@ -53,12 +53,12 @@ function addRSStoDOM(data) {
 var xhr = new XMLHttpRequest();
 xhr.onload = function(){
   if (xhr.status >=200 && xhr.status < 300){
-    console.log("Sucess!")
+    json = JSON.parse(xhr.responseText)
+    console.log(json)
   }else{
     console.log("The Request Failed!")
   }
   }
-
 
 // The following gets the ADD RSS button to work.  This is a very similar
 // process that we did in the ToDo application.  Find the elements in
